@@ -63,6 +63,3 @@ def extractive_summary(text,summary_ratio=2):
     summary=nlargest(select_len,sent_scores,key=sent_scores.get)
     #joining
     return " ".join([sent.text for sent in summary])
-text="Natural language processing enables computers to understand text. It has various applications such as chatbots, translation, and summarization. Machine learning plays a key role in this field."
-ex_summary=extractive_summary(text)
-print(ex_summary)
