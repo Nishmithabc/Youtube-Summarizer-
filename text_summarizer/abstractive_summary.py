@@ -74,14 +74,7 @@ def abstractive_summary_single_chunk(text,tokenizer,model_name='t5-small',max_le
     summary=tokenizer.decode(summary_ids[0],skip_special_tokens=True)
     final_summary=sentence_case_text(summary)
     return final_summary
-input_text = """
-Natural Language Processing is a fascinating field of AI. It has applications in chatbots, 
-summarization, translation, and more. Recent advances like transformers have changed the game. 
-Models like T5 process data efficiently but have limits on token size.
-""" * 10  # Simulate a long input by repeating the text
 
-summary = abstractive_summary_chunks(input_text,max_length=150, min_length=100)
-print("Abstractive Summary:", summary)
 
 
 
