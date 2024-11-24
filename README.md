@@ -31,7 +31,7 @@ python -m spacy download en_core_web_sm
 - **`summarizer.py`**: Contains the main code for the extractive summarizer.
 - **`README.md`**: Documentation for setup and usage.
 
-#Extractive Summarizer
+# Extractive Summarizer
 
 This repository contains a Python implementation of an extractive text summarizer. The summarizer analyzes text to identify and extract the most relevant sentences, creating a concise summary. The implementation leverages libraries such as **spaCy**, **scikit-learn**, and **heapq**, and uses techniques like TF-IDF and cosine similarity to rank and select sentences for the summary.
 
