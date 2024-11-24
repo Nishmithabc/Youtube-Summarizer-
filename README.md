@@ -28,33 +28,16 @@ python -m spacy download en_core_web_sm
 
 ## File Details
 
-- **`summarizer.py`**: Contains the main code for the extractive summarizer.
+- **`text_summarizer`**: Contains the two different models of summarization.
+- extractive_summary.py
+- abstractive_summary.py
 - **`README.md`**: Documentation for setup and usage.
 
 # Extractive Summarizer
 
 This repository contains a Python implementation of an extractive text summarizer. The summarizer analyzes text to identify and extract the most relevant sentences, creating a concise summary. The implementation leverages libraries such as **spaCy**, **scikit-learn**, and **heapq**, and uses techniques like TF-IDF and cosine similarity to rank and select sentences for the summary.
 
-## Features
-1. **Load and Process Text**  
-   - Utilizes the **spaCy** model for tokenization, Part-of-Speech (POS) tagging, and other linguistic processing.  
-2. **Word Importance Calculation**  
-   - Assigns weights to words based on their POS and normalizes them to identify key terms.  
-3. **Sentence Scoring**  
-   - Scores sentences by summing the importance of words they contain.  
-4. **TF-IDF Analysis**  
-   - Uses TF-IDF to evaluate word importance across sentences.  
-5. **Cosine Similarity**  
-   - Identifies and reduces redundancy by calculating similarities between sentences.  
-6. **Summary Ratio**  
-   - Allows customization of the summary length by setting a ratio of sentences to include.  
-7. **Final Summary**  
-   - Outputs a summary by ranking sentences based on their importance.
+# Abstractive Summarizer
 
-## Setup Instructions
+This repository contains a Python implementation of an **abstractive text summarizer**. Unlike extractive methods, this summarizer generates concise summaries by paraphrasing and rephrasing the original content. The implementation uses **Hugging Face's Transformers library** and leverages the **T5 model** to create meaningful summaries. It includes features like text preprocessing, chunking for long inputs, and customizable summarization parameters.
 
-### Prerequisites
-Make sure you have Python 3.7 or higher installed on your system. The following Python libraries are required:
-- **spaCy**
-- **scikit-learn**
-- **heapq**
