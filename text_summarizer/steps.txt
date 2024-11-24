@@ -1,0 +1,14 @@
+EXTRACTIVE SUMMARY:
+1. Loading the spacy statistical model.
+2. Processing the text using the model.
+3. Removing the stop words and punctuation from the processed text.
+4. Adding the part of speech weight for each word to know each word's importance.
+5. Once done, then normalizing the values by dividing the maximum value with each word's value.
+6. Now each sentence's importance need to be found.
+7. By adding the value of words based on its appearence in the sentence.
+8. TF-IDF is taken for the sentences in text. this helps to know the importance of each word in each sentence.
+9. Cosine-similarity of the matrix from TF-IDF is taken to check the similarities of each vector. this helps to reduce the redundancy.
+10. Removing the similar sentence.
+11. Selecting the length of summary based on the summary ratio.
+12. Finding the largest among the sentence's values.
+13. Joining the sentences for the summary.
