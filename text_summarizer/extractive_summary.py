@@ -50,7 +50,13 @@ def extractive_summary(text,summary_ratio=0.4):
                 sent_scores[sentence]=sent_scores.get(sentence,0)+word_freq[word.text]
     '''TF-IDF term frequency inverse document frequency
     used to determine importance of each word in a document'''
-    tfidf_matrix=compute_tfidf(sentences)
+    tfidf_matrix=compute_tfidf(sents_text)
     cosine_matrix=cos_similarity(tfidf_matrix)
-
+    for i ,sent in enumerate(sentences):
+        for j in range(i+1,len(sentences)):
+            if cosine_matrix[i][j]>0.3:
+                sent_scores[sent]-=cosine_matrix[i][j]
+    select_len=int(len(sentences)*summary_ratio)
+    summary=nlargest(select_len,sent_scores,key=sent_scores.get)
+    return " ".join([sent.text for sent in summary])
 
