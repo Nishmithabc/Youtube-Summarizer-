@@ -1,6 +1,0 @@
-TF(t,d)=number of times t appears in the document/total number of terms in document
-IDF(t,D)=total number of document in corpus|D|/number of documents containing term t.
-if term is rare across the corpus then high IDF 
-TF-IDF(t,d,D)=TF(t,d) x IDF(t,D)
-this helps in distinguishing the important words.
-if it is unique then it has higher TF-IDF value
