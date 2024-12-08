@@ -69,7 +69,7 @@ SummariFi/
 The application requires the following key libraries:
 
 - **Streamlit**: For the web interface.
-- **ylt-dp**: To fetch video streams.
+- **yt-dlp**: To fetch video streams.
 - **youtube-transcript-api**: To retrieve video transcripts.
 - **openai-whisper**: For audio transcription.
 - **nltk**: For extractive summarization.
