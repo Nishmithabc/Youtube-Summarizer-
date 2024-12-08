@@ -1,0 +1,7 @@
+TF(t,d)=number of repeatation of words in sentence/total number of words in sentence
+IDF(t,D)=log(no. of sentences/no. of sentences containing this word).
+If term is rare across the corpus then high IDF .
+TF-IDF(t,d,D)=TF(t,d) x IDF(t,D)
+Words in column and sentences are in the row
+this helps in distinguishing the important words.
+If it is unique then it has higher TF-IDF value

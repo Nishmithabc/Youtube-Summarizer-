@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Full-screen background image */
+.home-container {
+    height: 100vh;
+    background: url('./images/background.jpg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: left; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center;
+    color: white;
+}
+
+/* Logo at the top of the screen, fixed at the top-center */
+.logo {
+    font-size: 3rem;
+    position: fixed;
+    top: 80px; /* Adjust space from top */
+    left: 15%; /* Center the logo horizontally */
+    color: white;
+    z-index: 1000; /* Ensures logo stays on top of other content */
+}
+
+/* Content Box Styling (Positioned below the logo) */
+.content {
+    max-width: 800px;
+    text-align: center;
+    left:0.4%;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.274));
+    border-radius: 10px;
+    width: 70%;
+    right:15%;
+    position: relative;
+    z-index: 1; /* Ensures content stays above the background */
+    margin-top: 50px; /* Adds space below the logo */
+}
+
+/* Description text */
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+    align-content: center;
+}
+
+/* Styling for the "Get Started" button */
+.get-started-btn {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background-color: #d11515;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition for scale effect */
+}
+
+/* Button hover effect */
+.get-started-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
